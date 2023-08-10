@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <script src="main.js"></script>
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  	<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .back {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        height: 50px;
+        width: 45px;
+        z-index: 1;
+    }
+
+    .back button {
+        background-color: white;
+        height: 57px;
+        width: 65px;
+        opacity: 0.6;
+        color: black;
+    }
+
+    .back button:hover {
+        opacity: 1;
+    }
+
+    .logo {
+        display: inline-block;
+        position: absolute;
+        left: 35px;
+        top: 20px;
+        background-color: white;
+
+        /* border: 2px solid green; */
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -15px;
+        transition: width 4s, height 4s transform 4s;
+       
+    }
+
+    .logo img:hover {
+        width: 300px;
+        height: 300px;
+        transform: rotate(360deg);
+    }
+    .contact{
+        position: relative;
+        min-height: 100vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url("image/contact.jpg");
+        background-size: cover;
+       
+       
+      
+        
+}
+
+.contact .content h2{
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+
+}
+
+.contact .content  p{
+    /* font-size: 36px; */
+    font-weight: 300;
+    color: #fff;
+}
+
+
+
+.contform{
+    width: 55%;
+    padding: 40px;
+    background: #fff;
+    position: relative;
+    top: 20px;
+    left: 235px;
+    box-shadow: 1px 2px 25px #00bcd4;
+}
+
+.contform h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    top: -5px
+
+}
+
+.contform .inputbox textarea
+.contform .inputbox input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+
+}
+
+.contform .inputbox1 input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+
+}
+
+ /* .contform .inputbox span{ 
+    position: absolute;
+    left: 7px;
+     padding: 5px 0; 
+    font-size: 15px;
+     margin: -5px 0; 
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+    
+} */
+/* .contform .inputbox1 span{ 
+    position: absolute;
+    left: 45px;
+    bottom: 200px;
+     padding: 5px 0; 
+    font-size: 16px;
+     margin: -5px 0; 
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+
+    
+}
+
+.contform .inputbox input:focus ~ span,
+.contform .inputbox input:valid ~ span,
+.contform .inputbox textarea:focus ~ span,
+.contform .inputbox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contform .inputbox1 input:focus ~ span,
+.contform .inputbox1 input:valid ~ span,
+.contform .inputbox1 textarea:focus ~ span,
+.contform .inputbox1 textarea:focus ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+} */
+
+
+
+.contform .inputbox input[type="submit"]{
+    top: 23px;
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    position: relative;
+    left: 67px;
+}
+.contact #map{
+    position: absolute;
+    top: 200px;
+    left: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <div class="logo">
+        <img src="image/logo2.png" alt="">
+    </div>
+    <div class="back">
+        <a href="homee.html"> <button class="backhome"><i class=" fas fa-home "></i> Home
+            </button></a>
+    </div>
+    <div class="contact">
+        <div id = "map" style = "width: 480px; height: 320px"></div>
+        <div class="content">
+            <h2>Contact Us</h2>
+        </div>
+
+        
+                    <div class="contform">
+                        <form action = "mailto:nikam.arpita2001@gmail.com" method="post" enctype="text/plain">
+                            <h2>Send Message</h2>
+                            <div class="inputbox">
+                                <input type="text" name="Name" required="required">
+                                <span>Full Name</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" name="Email" required="required">
+                                <span>Email</span>
+                            </div>
+                            <div class="inputbox1">
+                                <textarea required="required" name="Msg" cols="30" rows="10"></textarea>
+                                <span>Type your message...</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="submit" name="" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+</body>
+<script>
+    // Creating map options
+    var mapOptions = {
+       center: [18.9902, 73.1277],
+       center: [16.9502, 76.0275],
+       zoom: 25
+    }
+    
+    // Creating a map object
+    var map = new L.map('map', mapOptions);
+    
+    // Creating a Layer object
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png');
+    
+    // Adding layer to the map
+    map.addLayer(layer);
+
+    // Creating a marker
+    var marker = L.marker([19.17083354662508, 73.11352080780738]); 
+   var marker2 = L.marker([19.164178352126267, 73.11694211006271]); 
+   var marker3 = L.marker([19.17296630078292, 73.11178579711847]); 
+    
+    // Adding marker to the map
+    marker.addTo(map);
+  marker2.addTo(map);
+  marker3.addTo(map);
+  marker1.bindPopup("pets for vets").openPopup();          
+  marker2.bindPopup("paws and claws").openPopup();         
+   marker3.bindPopup("premium petshop").openPopup(); 
+</script>
+
+</html>

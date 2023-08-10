@@ -1,0 +1,59 @@
+body{
+    position: relative;
+  
+    
+  }
+  fieldset{
+    background-color: rgb(195, 224, 252);
+    width: 650px;
+
+  }
+button {
+  border: rgba(7, 47, 226, 0.767);
+  border-width: 3px;
+  background-color: #008CBA;
+  color: rgb(253, 253, 253);
+  padding: 15px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 8px;
+  margin : 25px;
+  ;
+}
+label{
+  font: size 30px; ;
+  font-weight:bold ;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  color: blue;
+}
+legend{
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color-scheme:blue ;
+  font-weight: bold;
+  font-style: oblique;
+}
+.button:active {
+background-color: #3e8e41;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+input[type=submit]{
+border: rgba(7, 47, 226, 0.767);
+  border-width: 3px;
+  background-color: #008CBA;
+  color: rgb(253, 253, 253);
+  padding: 15px 15px;
+  font-size: 24px;
+  border-radius: 8px;
+  margin : 25px;
+  ;
+}
+
+input[type=text],input[type=email],select,textarea{
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+}

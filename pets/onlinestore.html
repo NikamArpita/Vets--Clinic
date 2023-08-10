@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/c240ae0fe1.js" crossorigin="anonymous"></script>
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background-image: url("image/back.png");
+}
+
+* {
+  box-sizing: border-box;
+}
+.back button{
+    color: wheat;
+    background-color: black;
+    height: 41px;
+    position: absolute;
+    left: 7px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.buy button{
+    color: wheat;
+    background-color: black;
+    height: 41px;
+    position: absolute;
+    right: 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    
+  
+}
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  /* width: 50%; */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  position: relative;
+  left: 400px;
+
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: wheat;
+  background-color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  color: wheat;
+  background-color: black;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: wheat;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background: black;
+    border-radius: 20%;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.row {
+ display: flex;
+ flex-direction: row;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.column{
+  height: 50%;
+  width: 50%;
+}
+h2{
+  color: white;
+  background-color: #4b40bf;
+  
+}
+
+    .main{
+        display: flex; 
+        flex-direction: row;
+        flex-shrink: initial;
+        background-color: black;
+    }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 5rem;
+    background-color: black;
+    }
+h3,p{
+    color:aliceblue;
+}
+p{
+    font-size: small;
+}
+.icecream1{
+            background-image: linear-gradient(to right, rgba(255,0,0,0), purple, blueviolet);
+           height: 12rem;
+           width:95%;
+           border-radius: 2rem;
+        }
+        .icecream2{
+            background-image: linear-gradient(to left,rgba(255,0,0,0), purple, blueviolet );
+           height: 12rem;
+           width:95%;
+           border-radius: 2rem;
+        } 
+        .shop1{
+            height: 10rem;
+            width: 10rem;
+            float: left;
+            margin: 1rem 1rem 1rem 1rem;
+            border-radius: 5rem;
+        }
+        .shop2{
+            height: 10rem;
+            width: 10rem;
+            float: right;
+            margin: 1rem 1rem 1rem 1rem;
+            border-radius: 5rem;
+        }
+
+        .anchortag{
+            text-decoration: none;
+            color: white;
+        }
+        .anchortag:hover{
+            color: #03506F;
+        }
+
+</style>
+<body>
+
+<h2 style="text-align:center">Your Pet Deserves The Best!</h2>
+
+<div class="container">
+    <div class="back">
+        <a href="home2.html"> <button class="backhome"><i class=" fas fa-home "></i> Home
+            </button></a>
+    </div>
+    <div class="buy">
+        <a href="product.html"> <button class="buyy"><i class=" fas fa-cart-plus "></i> Buy Now
+            </button></a>
+    </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="images/pillow.jpg" style="width:50%" height="350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="images/dish.jpg" style="width:50%" height="350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="images/comb.jpg" style="width:50%" height="350px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="images/collar.jpg" style="width:50%" height="350px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="images/towel.jpg" style="width:50%" height="350px">
+  </div>
+  
+ 
+     
+ </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">Previous</a>
+  <a class="next" onclick="plusSlides(1)">Next</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/pillow.jpg" style="width:50%" onclick="currentSlide(1)" alt="Pillowtop">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/dish.jpg" style="width:50%" onclick="currentSlide(2)" alt="Food Dish">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/comb.jpg" style="width:50%" onclick="currentSlide(3)" alt="Grooming Comb">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/collar.jpg" style="width:50%" onclick="currentSlide(4)" alt="Pet Collar">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/towel.jpg" style="width:50%" onclick="currentSlide(5)" alt="Absorbent Towel">
+    </div>    
+    
+  </div>
+</div>
+
+<div class="icecream1">
+
+  <img src="images/CF.jpg" alt="khi" class="shop1">
+<center>
+      <a href="catfood.html" class="anchortag"> <h1>CAT FOOD</h1></a>
+    </center>
+ </div>
+
+<div class="icecream2">
+  <img src="images/DF.jpg" alt="khi" class="shop2">
+<center>
+      <a href="images/.html" class="anchortag"> <h1>DOG FOOD</h1></a>
+    </center>
+</div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>

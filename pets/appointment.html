@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="appointment.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form method="post" action="new.php" name="appointment" >
+        <fieldset>
+          <legend>PET DETAILS</legend>
+          <label>
+            What's the name of your pet ?
+            <input type="text" name="pn" id="t" onblur="na();" required> 
+          </label>
+          <span id="msg" style="color: red;"></span>
+          <br>
+          <br>
+           <div class="two-cols">
+          <label>
+             <span id="p1">Your pet </span> is a ....<br><br>
+              <div>
+                <input type="radio" name="type" value="cat">CAT
+                <input type="radio" name="type" value="dog">DOG
+                 
+            </label>
+         </div><br>
+         <label>
+          <span id="p2">Your pet</span> is ....<br><br>
+          <div>
+            <input type="radio" name="sex" value="male">MALE
+            <input type="radio" name="sex" value="female">FEMALE
+              
+          
+        </div>
+     
+        </label>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Appointment request</legend>
+          
+          <div class="two-cols">
+            <label>
+              Date
+              <input type="date" name="dt" max="2022-06-13" id="dt" onchange="date();" required >
+            </label>
+        </div>
+        <br><br>
+               
+
+                <div class="control-group">
+                  <lable>Select a time slot for appointment</lable><br><br>
+                <input type="radio" id="slot" name="slot" value="morning" >
+                <label for="mor"> MORNING </label><br><br>
+                
+  
+                <input type="radio" id="slot" name="slot" value="afternoon">
+                <label for="after"> AFTERNOON </label><br><br>
+                
+                
+               
+                <input type="radio" id="slot" name="slot" value="evening">
+                <label for="eve"> EVENING </label><br><br>
+                
+                SELECT A TIME:
+
+                    <select name="tym" required>
+                      <option default> Please select one</option>
+                      <option value="10">10:00 am</option>
+                      <option value="10:30">10:30 am</option>
+                      <option value="11">11:00 am</option>
+                      <option value="11:30">11:30 am</option>
+                      <option value="1">1:00 pm</option>
+                      <option value="1:30">1:30 pm</option>
+                      <option value="3">3:00 pm</option>
+                      <option value="3:30">3:30 pm</option>
+                      <option value="4">4:00 pm</option>
+                      <option value="4:30">4:30 pm</option>
+                      <option value="7">7:00 pm</option>
+                      <option value="7:30">7:30 pm</option>
+                      <option value="8">8:00 pm</option>
+                      <option value="8:30">8:30 pm</option>
+                    </select><br><br> 
+                 </div>
+   
+                 
+                    
+
+    
+                
+                
+           <label>What's the reason for <span id="p3">Your pet </span>'s visit?</label>
+                <select name="re"required>
+                  <option default> Please select one</option>
+                  <option value="Lethargic Behavior"> Lethargic Behavior</option>
+                  <option value="Eye Issues">Eye Issues</option>
+                  <option value="Puppy/Kitten">Puppy/Kitten</option>
+                  <option value="Euthanasia"> Euthanasia</option>
+                  <option value="buttonmping/Paw/Leg"> buttonmping/Paw/Leg</option>
+                  <option value="Skin Issues">Skin Issues</option>
+                  <option value="Mouth/Teeth Issue"> Mouth/Teeth Issue</option>
+                  <option value="Sick">Sick</option>
+                  <option value="Urinary Issue">Urinary Issue</option>
+                  <option value="Ear Issue">Ear Issue</option>
+                  <option value="Wellness/Vaccine"> Wellness/Vaccine</option>
+                  <option value="Vomiting/Diarrhea/GI"> Vomiting/Diarrhea/GI</option>
+                  <option value="Surgical Recheck">Surgical Recheck</option>
+                  <option value="other"> Other</option>
+                </select><br>
+                <textarea placeholder="Tell us more"></textarea><br>
+                <fieldset>
+                  <legend>Its your turn</legend>
+                  <input type="text" placeholder="First name" name="fname">
+                  <input type="text" placeholder="Last name" name="lname"><br>
+                  <input type="email" placeholder="email"><br>
+                  
+                </fieldset>
+          <p >Confirmation requested by</label>
+          <div class="inline">
+            <label>
+              <input type="radio" name="Confirmation" value="email" checked>
+              Email
+            </label>
+            <label>
+              <input type="radio" name="Confirmation" value="phone">
+              Phone call
+            </label>
+          </div><br>
+
+          <label for="email">Email:</label>
+<input type="text"  size="50" id="e" name="em" onblur="m();"><span id="msg2" style="color: red;"></span><br><br>
+
+<label for="pno">Phone No</label>    
+<input type="text" id="pno" name="ph" onblur="pn();"><span id="msg1" style="color: red;"></span> <br><br>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <div class="card-details">
+            <p>Pay using Credit or Debit card</p>
+      
+            <div class="card-number">
+              <label> Card Number </label>
+              <input
+                type="text"
+                class="card-number-field"
+                placeholder="###-###-###" name="cno"/>
+            </div>
+            <br />
+            <div class="date-number">
+              <label> Expiry Date </label>
+              <input type="text" class="date-number-field" 
+                     placeholder="DD-MM-YY" name="expdt"/>
+            </div>
+      
+            <div class="cvv-number">
+              <label> CVV number </label>
+              <input type="text" class="cvv-number-field" 
+                     placeholder="xxx" name="cvv"/>
+            </div>
+            <div class="nameholder-number">
+              <label> Card Holder name </label>
+              <input
+                type="text"
+                class="card-name-field"
+                placeholder="Enter your Name" name="cholder"/>
+            </div>
+        </fieldset>
+        <div class="btns">
+        <input type="submit" value="Submit request">
+        </div> 
+
+      
+      </form>
+    
+</body>
+</html>

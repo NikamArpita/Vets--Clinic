@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c240ae0fe1.js" crossorigin="anonymous"></script>
+    <script>
+      function fun() {
+        var p = parseFloat(document.getElementById("p").value);
+        var q = parseFloat(document.getElementById("q").value);
+        var a = p * q;
+        var g = a * 0.18;
+        var f = a + g;
+        document.getElementById("a").value = a;
+        document.getElementById("g").value = g;
+        document.getElementById("f").value = f;
+      }
+
+      function pval(){
+     
+    
+      document.getElementById("p").value = document.getElementById("prod").value
+      document.getElementById("ht").innerText=document.getElementById("prod").value
+      }
+	    function check()
+      {
+        var letters = /^[A-Za-z]+$/;
+        var name = document.getElementById("n").value
+        if(name=="")
+        {
+         document.getElementById("msg").innerHTML="**Please fill name";
+         return false;
+        }
+
+        if(name.length<3)
+        {
+         document.getElementById("msg").innerHTML= "**name must have atleast 3 charachters";
+         return false;
+        }
+
+        if(name.length>13)
+        {
+         document.getElementById("msg").innerHTML="**name cannot have more than 13 charachters";
+         return false;
+        }
+
+      } 
+	  function fxn(){
+var num= document.getElementById("number").value;
+if (isNaN(num)){
+  document.getElementById("number").innerHTML="Enter Numeric value only";
+  return false;
+}else{
+  return true;
+  }
+}
+
+
+function pv()
+{
+    var p1=document.getElementById("pass").value;
+    var p2=document.getElementById("cpass").value;
+    if(p1==p2)
+    {
+        return true;
+    }
+    else{
+        document.getElementById("pv").innerHTML= "*password must be same!";
+        return false;
+    }
+}
+
+
+    
+    </script>
+  </head>
+  <style>
+    * {
+      margin: 10px;
+      padding: 10px;
+    }
+    body{
+      background-image: url("image/back.png");
+    }
+    .log img {
+    position: absolute;
+    top: 56px;
+    left: 82px;
+    height: 100px;
+    }
+    h1 {
+      color: black;
+      position: relative;
+      text-align: center;
+    }
+    .p h1 {
+      color: #4b40bf;
+      font-size: 43px;
+      position: relative;
+      text-align: center;
+     
+    }
+    label {
+      color: black;
+    
+     
+    }
+
+    body {
+      background-color: lightgoldenrodyellow;
+      border: 3px solid rgb(41, 153, 228);
+    }
+    .form {
+      border: 3px solid rgb(25, 25, 26);
+      background-color: #6b63b9;
+      width: 710px;
+      height: 826px;
+      position: relative;
+      left: 280px;
+      top: 0px;
+    }
+    .back button{
+      color: white;
+    background-color: #4b40bf;
+    height: 60px;
+    width: 116px;
+    position: absolute;
+    right: 63px;
+    top: 112px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    
+}
+.back button:hover {
+        opacity: 0.6;
+    }
+
+  </style>
+  <body>
+    <div class="log">
+      <img src="image/logo2.png" alt="">
+    </div>
+    <div class="p">
+      <h1>VETS4PETS Shopping</h1>
+    </div>
+   
+      <div class="back">
+          <a href="homee.html"> <button class="backhome"><i class=" fas fa-home "></i> Home
+              </button></a>
+      </div>
+    <h1 >Place your order</h1>
+    <div class="form">
+      <form action="">
+        Name:-
+        <input type="text" id="n" name="n" onblur="check()"  />
+		<span id="msg"></span>
+        <br />
+        Email:-<input type="email" id="e" name="e"  />
+        <br />
+		Phone Number: <input type="text" name="num"  onblur="fxn()"><span id="number"></span><br/>
+        Password: <input type="password" name="pass" id="pass"><br>
+        Confirm Password: <input type="password" name="cpass" id="cpass" onblur="pv()"><span id="pv"></span><br>
+
+        Type your address:- <br> <textarea id="ad" name="ad" ></textarea>
+        <br />
+		
+		
+        <label for="prod">Choose your product</label>
+        <select name="prod" id="prod" onchange="pval();">
+
+          <option value="400">Pillowtop Price</option>
+          <option value="250">Food Dish Price</option>
+          <option value="170">Grooming Comb Price</option>
+          <option value="500">Dog Collar Price </option>
+          <option value="300">Absorbent Towel Price</option>
+        </select>
+        <br />
+        <label for="p1">Price</label>
+        <input type="text" id="p" onclick="fn()" />
+        <!-- <input type="button" value="click" id="p" >--><br />
+        <label for="">Quantity</label>
+        <input type="text" id="q" />
+        <!-- <input type="button" value="click" id="q" onfocus="fun()">--><br />
+        <label for="">Amount</label>
+        <input type="text" id="a" onfocus="fun()" />
+        <!-- <input type="button" value="click" id="a" onfocus="fun()"> --><br />
+        <label for="">GST</label>
+        <input type="text" id="g" onfocus="fun()" />
+        <!-- <input type="button" value="click" id="g" onfocus="fun()">--><br />
+        <label for="">Total Bill</label>
+        <input type="text" id="f" onfocus="fun()" />
+        <!-- <input type="button" value="click" id="f" onfocus="fun()"><br><br> -->
+        <br />
+        <input type="submit" value="Place Order" id="pi" onclick="fun()" />
+		
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <script src="https://kit.fontawesome.com/f2116c735f.js" crossorigin="anonymous"></script>
+    
+    <title>VETS 4 PETS</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fa-solid fa-kit-medical"></i>
+                <div class="logo_name">VETS 4 PETS</div>
+            </div>
+            <i class="fa-solid fa-bars" id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="links_name">Home</span>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-dumpster"></i>
+                    <span class="links_name">Products</span>
+                    <span class="tooltip">Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span class="links_name">Order</span>
+                    <span class="tooltip">Order</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-address-book"></i>
+                    <span class="links_name">Contact</span>
+                    <span class="tooltip">Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                    <span class="links_name">About Us</span>
+                    <span class="tooltip">About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-blog"></i>
+                    <span class="links_name">Blog</span>
+                    <span class="tooltip">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='fas fa-sign-in-alt'></i>
+                    <span class="links_name">Login/Sign Up</span>
+                    <span class="tooltip">Login/Sign Up</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="home_content">
+        <div class="text">Content Written</div>
+    </div>
+    
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

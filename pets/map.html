@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+  	<title>Leaflet sample</title>
+  	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  	<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+   </head>
+
+   <body>
+       <h1 > VETS for PETS</h1>
+       <h3>Out outlets are at </h3>
+  	<div id = "map" style = "width: 900px; height: 580px"></div>
+  	<script>
+     	// Creating map options
+     	var mapOptions = {
+        	center: [18.9902, 73.1277],
+        	zoom: 25
+     	}
+    	 
+     	// Creating a map object
+     	var map = new L.map('map', mapOptions);
+    	 
+     	// Creating a Layer object
+     	var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    	 
+     	// Adding layer to the map
+     	map.addLayer(layer);
+    
+     	// Creating a marker
+     	var marker1 = L.marker([19.17083354662508, 73.11352080780738]);
+    	 
+     	// Adding marker to the map
+     	marker1.addTo(map);
+
+         var marker2 = L.marker([19.164178352126267, 73.11694211006271]);
+    	 
+     	// Adding marker to the map
+     	marker2.addTo(map);
+
+         var marker3 = L.marker([19.17296630078292, 73.11178579711847]);
+    	 
+     	// Adding marker to the map
+     	marker3.addTo(map);
+
+         marker1.bindPopup("pets for vets").openPopup();
+         marker2.bindPopup("paws and claws").openPopup();
+         marker3.bindPopup("premium petshop").openPopup();
+
+         
+  	</script>
+   </body>
+   
+</html>

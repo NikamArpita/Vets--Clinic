@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+        integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+            <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+          </svg> -->
+          <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/c240ae0fe1.js" crossorigin="anonymous"></script>
+        
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: #b49aeb;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("payyy.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .R{
+        background-color: #fff;
+        width: 500px;
+        margin: 25px;
+        padding: 25px auto 0;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0,0.9);
+        position: absolute;
+    top: 148px;
+    left: 432px
+    }
+
+    h4{
+        padding-bottom: 5px;
+        color: #6517e1
+    }
+
+    .input-gr{
+        margin-bottom: 8px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+
+    .input-box{
+        width: 100%;
+        margin-right: 12px;
+        position: relative;
+    }
+
+    .input-box:last-child{
+        margin-right: 0;
+    }
+
+    .name{
+        padding: 14px 10px 14px 50px;
+        width: 100%;
+        background-color: #fcfcfc;
+        border: 1px solid #00000033;
+        outline: none;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        border-radius: 3px;
+        color: #333;
+    }
+
+    .name:focus , .dob:focus{
+        box-shadow: 0 0 2px 1px #7ed32180;
+        border: 1px solid #5a21d3 ;
+
+    }
+
+    .input-box .icon{
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 1px;
+        left: 0px;
+        right: 0px;
+        color: #333;
+        background-color: #f1f1f1;
+        height: 43px;
+        border: 2px 0 0 2px;
+        transition: 0.3s;
+        font-size: 20px;
+        pointer-events: none;
+        border: 1px solid #00000033;
+        border-right: none;
+
+    }
+
+    .name:focus + .icon{
+        background-color: #5a21d3;
+        color: #fff;
+        border-right: 1px solid #5a21d3;
+        border: none;
+        transition: 1s;
+    }
+
+    .dob{
+        width: 30%;
+        pad: 14px;
+        text-align: center;
+        background-color: #fcfcfc;
+        transition: 0.3s;
+        outline: none;
+        border: 1px solid #c0bfbf;
+        border-radius: 3px;
+    }
+
+    .radio{
+        display: none;
+    }
+
+    .input-box label{
+        width: 50%;
+        padding: 13px;
+        background-color: #fcfcfc;
+        display: inline-block;
+        float:left;
+        text-align: center;
+        border: 1px solid #c0bfbf;
+    }
+
+    .radio:checked + label{
+        background-color: #5a21d3;
+        color: white;
+        transition: 0.6s;
+
+    }
+
+    button{
+        width: 100%;
+        background: transparent;
+        border: none;
+        background: #5a21d3;
+        color: #fff;
+        padding: 15px;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: all 0.35 ease;
+
+    }
+
+    button:hover{
+        cursor: pointer;
+        background: #5a21d3;
+    }
+
+    .box1{
+        width: 100%;
+        margin-right: 12px;
+        position: relative;
+        margin-bottom: 8px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+    .box1 label{
+        width: 50%;
+        padding: 13px;
+        background-color: #fcfcfc;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        border: 1px solid #c0bfbf;
+        
+    }
+    .box2{
+        width: 100%;
+        margin-right: 12px;
+        position: relative;
+        margin-bottom: 8px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        color: black;
+    }
+    .box2 label{
+        width: 50%;
+        padding: 13px;
+        background-color: #fcfcfc;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        border: 1px solid #c0bfbf;
+    }
+
+    .box3{
+        width: 100%;
+        margin-right: 12px;
+        position: relative;
+        margin-bottom: 8px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        color: black;
+    }
+    .box3 label{
+        width: 50%;
+        padding: 13px;
+        background-color: #fcfcfc;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        border: 1px solid #c0bfbf;
+    }
+
+    .pay h1{
+        font-size: 34px;
+    position: absolute;
+    top: 10px;
+    left: 550px;
+    text-shadow: 2px 2px #f1e530;
+    color: white;
+    }
+    .R .cd img{
+        width: 225px;
+    height: 109px;
+    position: absolute;
+    top: -91px;
+    left: 144px
+    }
+
+    .back {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        height: 50px;
+        width: 45px;
+        z-index: 1;
+    }
+
+    .back button {
+        background-color: white;
+        height: 57px;
+        width: 65px;
+        opacity: 0.6;
+        color: black;
+    }
+
+    .back button:hover {
+        opacity: 1;
+    }
+
+    .logo {
+        display: inline-block;
+        position: absolute;
+        left: 35px;
+        top: 20px;
+        background-color: white;
+
+        /* border: 2px solid green; */
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -15px;
+        transition: width 4s, height 4s transform 4s;
+       
+    }
+
+    .logo img:hover {
+        width: 300px;
+        height: 300px;
+        transform: rotate(360deg);
+    }
+
+
+</style>
+
+<body>
+    <div class="logo">
+        <img src="LOGO.jpg" alt="">
+    </div>
+    <div class="back">
+        <a href="file:///C:/Users/Sanket/Desktop/GATE/images/HOMIEeee.html"> <button class="backhome"><i class=" fas fa-home "></i> Home
+            </button></a>
+    </div>
+
+    <div class="pay"><h1>Proceed For Payment</h1></div>
+    
+    <div class="R">
+        
+        <form action="post">
+            <div class="cd"><img src="pay.jpg" alt=""></div>
+            <h4>Account</h4>
+            <div class="input-gr">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input-gr">
+                <div class="input-box">
+                    <input type="email" placeholder="Email Address" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+                <!-- <div class="input-box">
+                    <input type="text" placeholder="Last Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+
+                </div> -->
+            </div>
+            <div class="input-gr">
+                <div class="input-box">
+                    <h4>Date of Birth</h4>
+                    <input type="text" placeholder="DD" required class="dob">
+                    <input type="text" placeholder="MM" required class="dob">
+                    <input type="text" placeholder="YYYY" required class="dob">
+
+                </div>
+                <div class="input-box">
+                    <h4>Gender</h4>
+                    <input type="radio" id="b1" name="gender" checked class="radio">
+                    <label for="b1"> Male</label>
+                    <input type="radio" id="b2" name="gender" checked class="radio">
+                    <label for="b2"> Female</label>
+                </div>
+            </div>
+            <div class="input-gr">
+                <div class="input-box">
+                    <input type="tel" placeholder="Card Number" required class="name">
+                    <i class="bi bi-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input-gr">
+                <div class="input-box">
+                    <input type="tel" placeholder="CVC" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                
+            </div>
+            <div class="box1">
+                <label for="cardex">Card expiry month</label>
+                <input type="month" name="month" id="month" placeholder="MM">
+            </div>
+            <div class="box2">
+                <label for="year">Card expiry year</label><br>
+                <input type="year" name="year" id="year" placeholder="YYYY">
+            </div>
+
+            <div class="box3">
+                <label for="amt">Amount</label><br>
+                <input type="text" name="txt" id="tx" placeholder="Rs">
+            </div>
+                
+
+            
+
+            <div class="input-gr">
+                <div class="input-box">
+                    <button type="submit"> PAY NOW</button>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>
